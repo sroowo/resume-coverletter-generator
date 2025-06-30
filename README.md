@@ -10,8 +10,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Try it here](https://sroowo-resume-coverletter-generator.streamlit.app)
-
+🔗 [Try it here](https://resumecvgenerator.streamlit.app/)
 ---
 
 ## ✨ Features
