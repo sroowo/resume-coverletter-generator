@@ -3,7 +3,6 @@
 import re
 import streamlit as st
 from google.generativeai import GenerativeModel, configure
-from dotenv import load_dotenv
 import os
 from fpdf import FPDF
 import requests
@@ -92,9 +91,7 @@ def text_to_pdf(text, filename):
         pdf.multi_cell(0, 10, clean_line)
     pdf.output(filename)
 
-# Load API key
-load_dotenv()
-configure(api_key=os.getenv("GEMINI_API_KEY"))
+configure(api_key=st.secrets["GEMINI_API_KEY"])
 try:
     model = GenerativeModel("gemini-1.5-flash")
 except Exception:
